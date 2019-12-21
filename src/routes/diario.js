@@ -38,7 +38,7 @@ router.get('/notes', async(req,res) =>{
  res.render('notes/allnotes', {notes});   
 })
 
-router.get('/notes/edit/:edit', async(req, res) =>{
+router.get('/notes/edit/:id', async(req, res) =>{
     const note = await Note.findById(req.params.id);
     res.render('notes/editnotes', {note});
 });
