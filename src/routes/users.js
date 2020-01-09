@@ -57,4 +57,10 @@ router.post('/users/signup', async(req, res)=>{
    } 
 });
 
+router.get('/users/logout', (req, res) =>{
+    req.logout();
+    req.flash('success_msg','Ha salido de sesion satisfactoriamente');
+    res.redirect('/users/signin'); 
+});
+
 module.exports = router;
