@@ -55,6 +55,7 @@ app.use(require('./routes/diario'));
 //Statis files.
 
 app.use(express.static(path.join(__dirname, 'public')));
+
 //Server listenig
 app.listen(app.get('port'), () =>{
 
