@@ -56,8 +56,35 @@ app.use(require('./routes/diario'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get("/manifest.json", function(req, res){
+    //send the correct headers
+    res.header("Content-Type", "text/cache-manifest");
+    //console.log(path.join(__dirname,"manifest.json"));
+    //send the manifest file
+    //to be parsed bt express
+    res.sendFile(path.join(__dirname,"manifest.json"));
+  });
+
+//add the service worker
+app.get("/serviceWorker.js", function(req, res){
+    //send the correct headers
+    res.header("Content-Type", "text/javascript");
+    
+    res.sendFile(path.join(__dirname,"serviceWorker.js"));
+  });
+
+app.get("/loader.js", function(req, res){
+    //send the correct headers
+    res.header("Content-Type", "text/javascript");
+    
+    res.sendFile(path.join(__dirname,"loader.js"));
+  });
+
+
+
 //Server listenig
 app.listen(app.get('port'), () =>{
 
     console.log('Server on port ', app.get('port'));
 });
+
