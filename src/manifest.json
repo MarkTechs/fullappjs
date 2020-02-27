@@ -8,11 +8,7 @@
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "/public/Images/libreria.png",
-        "type": "image/png", "sizes": "256x256"
-      },
-      {
-        "src": "/public/Images/audio-libro.png",
+        "src": "/img/audio-libro.png",
         "type": "image/png", "sizes": "512x512"
       }
     ]
