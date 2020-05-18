@@ -5,5 +5,5 @@ mongoose.connect('mongodb://localhost/diario-db-app', {
     useNewUrlParser: true,
     useFindAndModify: false,
     useUnifiedTopology: true
-}).then( db => console.log('Connetion successeful'))
+}).then( db => console.log('Connection succesful'))
 .catch(err => console.log(err));

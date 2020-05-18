@@ -1,7 +1,7 @@
 {
     "name": "FullAPP",
     "short_name": "Notes",
-    "start_url": "main.hbs",
+    "start_url": ".",
     "display": "fullscreen",
     "background_color": "#fdfdfd",
     "theme_color": "#db4938",
