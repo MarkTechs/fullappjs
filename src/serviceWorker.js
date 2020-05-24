@@ -26,7 +26,8 @@ const assets = [
   "/views/partials/messages.hbs",
   "/views/partials/navigation.hbs",
   "/views/users/about.hbs",
-  "/views/users/index.hbs"
+  "/views/users/index.hbs",
+  "/views/rutina/rutina.hbs"
 
 ];
 
