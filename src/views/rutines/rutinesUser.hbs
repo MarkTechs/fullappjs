@@ -1,0 +1,37 @@
+<div class="row">
+  {{#each ejercicios}}
+  <div class="col-md-3">
+    <div class="card">
+      <img class="card-img-top" src="{{foto}}" alt="Card image cap">
+      
+      <div class="card-body">
+        <h5 class="card-title">{{nombre}}</h5>
+        <p class="card-text">
+          <br>
+          repeticiones ={{repeticiones}}
+          <br>
+          series ={{series}}<br>
+
+          Grupo musculo ={{Gmusculo}} <br>
+          peso ={{peso}}
+
+          .</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+
+  {{else}}
+
+  <div class="card mx-auto"></div>
+  <div class="card-body">
+    <h1>Hola {{nombre}}</h1>
+    <p style="color: white" class="lead"> Sin notas aún</p>
+    <a href='/notes/add' class="btn btn-primary btn-block btn-sm"> Crear</a>
+  </div>
+  {{/each}}
+
+
+
+</div>

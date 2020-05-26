@@ -1,0 +1,57 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-head">
+            <h3>Agregar Ejercicio</h3>
+        </div>
+        <div class="card-body">
+            <form action='/rutines/CreateRoutine' method="POST">
+                <div class="form-group">
+                    <input type="text" name='nombre' class="form-control" placeholder="Nombre" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name='repeticiones' class="form-control" placeholder="Repeticiones" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name='series' class="form-control" placeholder="Series" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name='Gmusculo' class="form-control" placeholder="Grupo musculo" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name='peso' class="form-control" placeholder="Peso" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input id="img1" type=image src="" width="25" height="15"> 
+                    {{!-- <img   id="img1"><br /> --}}
+                    <input name='foto' id="inputFile1" type="file">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function init() {
+  var inputFile = document.getElementById('inputFile1');
+  inputFile.addEventListener('change', mostrarImagen, false);
+}
+
+function mostrarImagen(event) {
+  var file = event.target.files[0];
+  var reader = new FileReader();
+  reader.onload = function(event) {
+    var img = document.getElementById('img1');
+    img.src= event.target.result;
+    console.log(img.src);
+  }
+  reader.readAsDataURL(file);
+}
+
+window.addEventListener('load', init, false);
+
+
+</script>

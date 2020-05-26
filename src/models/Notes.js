@@ -5,7 +5,7 @@ const NoteSchema = new Schema({
     title: {type: String, required: true},
     descripcion: {type: String, required: true},
     date: {type: Date, default: Date.now},
-    user: {type: String }
+    user: {type: String }   
 
 });
 

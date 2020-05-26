@@ -10,7 +10,8 @@ router.get('/users/signin', (req, res) => {
 })
 
 router.post('/users/signin' , passport.authenticate('local', {
-   successRedirect: '/notes',
+    // aqui llamamos al mae que abo de crear 
+   successRedirect: '/rutines/rutinesUser', 
    failureRedirect: '/users/signin',
    failureFlash: true 
 })); 

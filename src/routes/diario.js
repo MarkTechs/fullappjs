@@ -52,7 +52,7 @@ router.put('/notes/editnote/:id', isAuthenticated,async (req, res) =>{
     await Note.findByIdAndUpdate(req.params.id, {title, descripcion});
     req.flash('success_msg', 'Nota editada correctamente');
     res.redirect('/notes');
-});
+}); 
 
 
 router.delete('/notes/delete/:id', isAuthenticated,async(req, res)=>{
